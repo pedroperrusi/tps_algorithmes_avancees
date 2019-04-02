@@ -31,6 +31,7 @@ bash scripts/run.sh
 The project structure is based on [mini_cpp_proj](https://github.com/pedroperrusi/mini_cpp_proj).
 Most of the example files were not yet removed.
 
+```(bash)
 .
 ├── CMakeLists.txt
 ├── LICENSE
@@ -68,3 +69,4 @@ Most of the example files were not yet removed.
 └── test
     ├── CMakeLists.txt
     └── hello_world_tests.cpp
+```
