@@ -16,8 +16,8 @@ class CostFunction {
 	Image* imDef;
 
 	
-	CostFunction(Image*, Image*, Transformation*, DeformImage*, Similarite*,Parametres);
-	double operator () (Parametres) const;
+	CostFunction(Transformation*, DeformImage*, Similarite*,Parametres);
+	double operator () (Parametres);
 
 };
 

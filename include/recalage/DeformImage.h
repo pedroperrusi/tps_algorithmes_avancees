@@ -4,20 +4,20 @@
 #include <iostream>
 
 #include "recalage/Image.h"
-// #include "recalage/Interpolation.h"
+#include "recalage/Interpolation.h"
 #include "recalage/Transformation.h"
 #include "recalage/Parametres.h"
 
 class DeformImage {
 	private:
 		Transformation *t;
-		// Interpolation *i;
+		Interpolation *i;
 		Image mask;
 		Image deform;
 	public:
-		DeformImage(Transformation *t/*, Interpolation *i*/){
+		DeformImage(Transformation *t, Interpolation *i){
 			this->t = t;
-			// this->i = i;
+			this->i = i;
 		};
 		~DeformImage();
 		
@@ -31,7 +31,7 @@ class DeformImage {
 			return &this->deform;
 		};
 		
-		inline void setMask(Image mask){
+		inline void setMask(Image& mask){
 			this->mask = mask;
 		};
 		

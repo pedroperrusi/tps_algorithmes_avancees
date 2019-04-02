@@ -1,17 +1,14 @@
 #include"recalage/CostFunction.h"
 
-CostFunction::CostFunction(Image* imRef, Image* imDef, Transformation* t, DeformImage* d, Similarite* s,Parametres p)
+CostFunction::CostFunction(Transformation* t, DeformImage* d, Similarite* s,Parametres p)
 {
-	
-	this->imRef = imRef;
-	this->imDef = imDef;
 	this->t = t;
 	this->d = d;
 	this->s = s;
 	this->p = t->getParam();
 }
 
-double CostFunction::operator (Parametres p) const {
+double CostFunction::operator () (Parametres p) {
 	int i,j;
 
 	Image mask1;
