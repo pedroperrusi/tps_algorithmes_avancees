@@ -1,23 +1,19 @@
 #include"recalage/CostFunction.h"
 
-#include"recalage/DeformImage.h"
+CostFunction::CostFunction(DeformImage* d, Similarite* s)
+{
+	this->d = d;
+	this->s = s;
+}
 
-
-double CostFunction::Execute(Image* im1, Image* im2, Parametres p) {
-	
-	h = Image::getHeight(im1);
-	w = Image::getWidth(im2);
-	
+double CostFunction::execute(Image* im1, Image* im2, Parametres p) {
 	int i,j;
 
-	for (i=0; i<w; i++){
-		for (j=0; j<h; j++){
-			mask1[i][j] = 1;
-		}
-	}
-	Im2 = DeformImage::Execute(im1, mask1, p);
-	mask2 = DeformImage::getMask();
-	return Similarite(im1, mask1, im2, mask2);
+	Image mask1;
+
+	im2 = d->execute(im1, &mask1, p);
+	Image mask2 = d->getMask();
+	return s->execute(im1, &mask1, im2, &mask2);
 	
 
 }

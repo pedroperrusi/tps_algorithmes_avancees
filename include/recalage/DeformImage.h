@@ -21,15 +21,14 @@ class DeformImage {
 		};
 		~DeformImage();
 		
-		inline Image execute(Image *im, Image *mask, Parametres p) {
+		inline Image* execute(Image *im, Image *mask, Parametres p) {
 			for(int i = 0; i < im->getHeight(); i++){
 				for(int j = 0; j < im->getWidth(); j++) {
 					Point s = Point(i,j);
 					Point sPrime = t->execute(s, p);
-					
-					return this->deform;
 				}
 			}
+			return &this->deform;
 		};
 		
 		inline void setMask(Image mask){

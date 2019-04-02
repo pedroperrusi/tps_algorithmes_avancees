@@ -10,10 +10,16 @@ target_sources(
     PRIVATE
         HelloWorld.cpp
         Similarite.cpp
+        CostFunction.cpp
     PUBLIC
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/HelloWorld.h
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/Similarite.h
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/CostFunction.h
+        ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/Point.h
+        ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/Image.h
+        ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/Parametres.h
+        ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/DeformImage.h
+        ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/Transformation.h
     )
 
 target_include_directories(
