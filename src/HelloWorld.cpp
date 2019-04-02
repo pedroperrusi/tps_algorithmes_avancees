@@ -17,6 +17,7 @@
 #include "recalage/Image.h"
 #include "recalage/Similarite.h"
 #include "recalage/CostFunction.h"
+#include "recalage/Interpolation.h"
 
 #include <iostream>
 
