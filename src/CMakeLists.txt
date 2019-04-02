@@ -9,8 +9,10 @@ target_sources(
     recalage_lib
     PRIVATE
         HelloWorld.cpp
+        Similarite.cpp
     PUBLIC
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/HelloWorld.h
+        ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/Similarite.h
     )
 
 target_include_directories(
