@@ -46,12 +46,12 @@ Most of the example files were not yet removed.
 │   └── recalage
 │       ├── CostFunction.h
 │       ├── DeformImage.h
+│       ├── HelloWorld.h
 │       ├── Image.h
 │       ├── Interpolation.h
 │       ├── Parametres.h
 │       ├── Point.h
 │       ├── Similarite.h
-│       ├── TP_point_h.zip
 │       └── Transformation.h
 ├── scripts
 │   ├── build.sh
