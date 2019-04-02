@@ -1,7 +1,7 @@
 #ifndef SIMILARITE_H
 #define SIMILARITE_H
 
-#include "Image.h"
+#include "recalage/Image.h"
 
 
 
@@ -10,7 +10,7 @@
 
 class Similarite {
 	public :
-	virtual double execute(Image** im1, Image** mask1, Image** im2, Image** mask2)=0;
+	virtual double execute(const Image*, const Image* , const Image*,const Image*)=0;
 
 };
 
@@ -19,7 +19,7 @@ class Similarite {
 class SimilariteQuadratique : public Similarite {
 	
 	public:
-	double execute(Image** im1, Image** mask1, Image** im2, Image** mask2);
+	double execute(const Image*, const Image* , const Image*,const Image*);
 
 };
 
