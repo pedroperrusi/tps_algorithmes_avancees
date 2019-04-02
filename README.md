@@ -1,6 +1,4 @@
-# mini_cpp_proj
-
-Evolutive model of a basic C++ project structure based on CMake and GTest.
+# Algorithmes Avancées 2018-19
 
 The main reference for creating this project is [GitLab Modern CMake](https://cliutils.gitlab.io/modern-cmake/) webpage.
 Even though the project structure is quite charged it may be a starting point for C++ projects in the future.
