@@ -21,6 +21,8 @@ class Image
     
     inline int getHeight() { return this->height; };
     inline void setHeight(int h) { this->height = h; };
+
+    // Alloc et Desalloc image...
 };
 
 #endif

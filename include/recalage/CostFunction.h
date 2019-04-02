@@ -8,10 +8,16 @@
 #include "DeformImage.h"
 
 class CostFunction {
+	Parametres p;
 	DeformImage* d;
 	Similarite* s;
-	CostFunction(DeformImage*, Similarite*);
-	double execute(Image*,Image*, Parametres);
+	Transformation* t;
+	Image* imRef;
+	Image* imDef;
+
+	
+	CostFunction(Image*, Image*, Transformation*, DeformImage*, Similarite*,Parametres);
+	double operator () (Parametres) const;
 
 };
 
