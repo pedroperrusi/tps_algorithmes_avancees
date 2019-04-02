@@ -9,6 +9,11 @@
 
 #include "recalage/HelloWorld.h"
 
+#include "recalage/Parametres.h"
+#include "recalage/Image.h"
+#include "recalage/Similarite.h"
+#include "recalage/CostFunction.h"
+
 #include <iostream>
 
 namespace hello_world
