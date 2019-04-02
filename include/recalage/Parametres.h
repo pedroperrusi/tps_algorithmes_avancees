@@ -3,15 +3,15 @@
 
 #include <iostream>
 
-class Parameters
+class Parametres
 {
   private:
     double* values;
     int number;
     
   public:
-    Parameters();
-    ~Parameters();
+    Parametres();
+    ~Parametres();
     
     inline double getValue(int n){ return this->values[n]; };
 

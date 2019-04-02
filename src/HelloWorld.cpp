@@ -8,6 +8,10 @@
  */
 
 #include "recalage/HelloWorld.h"
+#include "recalage/Image.h"
+#include "recalage/Parametres.h"
+#include "recalage/DeformImage.h"
+#include "recalage/Transformation.h"
 
 #include <iostream>
 
