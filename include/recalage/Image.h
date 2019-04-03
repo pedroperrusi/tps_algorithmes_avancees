@@ -40,10 +40,8 @@ class Image
     {
         width = w;
         height = h;
-        if(using_memory())
-          this->desallocImage();
-        if(w > 0 && h > 0)
-          this->allocImage();
+        if(using_memory()) this->desallocImage();
+        if(w > 0 && h > 0) this->allocImage();
     }
     
     inline double getValue(int x, int y) const { return this->data[xy_to_idx(x, y)]; };
@@ -57,7 +55,7 @@ class Image
 
     inline void allocImage() { data = new double[width*height]; }
 
-    inline void desallocImage() { delete [] data; }
+    inline void desallocImage() { delete [] data; data = NULL; }
 
     inline int xy_to_idx(int x, int y) const { return x + y * width; }
 };

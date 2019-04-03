@@ -4,6 +4,7 @@
 add_executable(
     minimal_tests  # Executable name
     hello_world_tests.cpp # Source code
+    image_tests.cpp
   )
 
 # Link dependencies 
