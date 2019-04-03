@@ -13,28 +13,39 @@ class Image
     int height;
 
   public:
-    Image();
+    Image()
+    {
+        this->data = NULL;
+        width = 0;
+        height = 0;
+    };
 
     Image(int w, int h)
     {
-        this->setWidth(w);
-        this->setHeight(h);
+        this->data = NULL;
+        resize(w, h);
         allocImage();
     };
 
     ~Image()
     {
+      if(using_memory())
         desallocImage();
     };
 
-    inline void allocImage() { data = new double[width*height]; }
-
     inline int getWidth() const { return this->width; };
-    inline void setWidth(int w) { this->width = w; };
-    
     inline int getHeight() const { return this->height; };
-    inline void setHeight(int h) { this->height = h; };
 
+    inline void resize(int w, int h)
+    {
+        width = w;
+        height = h;
+        if(using_memory())
+          this->desallocImage();
+        if(w > 0 && h > 0)
+          this->allocImage();
+    }
+    
     inline double getValue(int x, int y) const { return this->data[xy_to_idx(x, y)]; };
     inline double getValue(Point p) const { return this->data[xy_to_idx(p.getX(), p.getY())]; };
 
@@ -42,6 +53,10 @@ class Image
     inline void setValue(Point p, double val){ this->data[xy_to_idx(p.getX(), p.getY())] = val; };
 
   private:
+    inline bool using_memory() { return !(this->data == NULL); };
+
+    inline void allocImage() { data = new double[width*height]; }
+
     inline void desallocImage() { delete [] data; }
 
     inline int xy_to_idx(int x, int y) const { return x + y * width; }
