@@ -11,14 +11,17 @@ class Transformation {
 	private:
 		Parametres param;
 	public:
-		virtual Point execute(Point, Parametres) = 0;
-		void setParam(Parametres);
+		Transformation(){
+			param = Parametres();
+		};
+		virtual Point execute(Point, Parametres *) = 0;
+		void setParam(Parametres *);
 		Parametres getParam();
 };
 
 class TransformationRigide : public Transformation{
 	public:
-		Point execute(Point, Parametres);
+		Point execute(Point, Parametres *);
 };
 
 #endif

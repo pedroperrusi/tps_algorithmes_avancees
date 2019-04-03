@@ -13,9 +13,9 @@ double CostFunction::operator () (Parametres p) {
 
 	Image mask1;
 
-	imDef = d->execute(imRef, &mask1, p);
-	Image mask2 = d->getMask();
-	return s -> execute(imRef, &mask1, imDef, &mask2);
+	// imDef = d->execute(imRef, &mask1, p);
+	// Image mask2 = d->getMask();
+	// return s -> execute(imRef, &mask1, imDef, &mask2);
 	
 
 }
