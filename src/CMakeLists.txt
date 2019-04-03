@@ -12,6 +12,7 @@ target_sources(
         Similarite.cpp
         CostFunction.cpp
         Interpolation.cpp
+        Recalage.cpp
     PUBLIC
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/HelloWorld.h
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/Similarite.h
@@ -22,6 +23,7 @@ target_sources(
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/DeformImage.h
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/Transformation.h
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/Interpolation.h
+        ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/amoeba.h
     )
 
 target_include_directories(

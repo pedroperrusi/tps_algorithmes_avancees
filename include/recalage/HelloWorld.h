@@ -6,6 +6,16 @@
 #ifndef _HELLOWORLD_H_
 #define _HELLOWORLD_H_
 
+#include "Image.h"
+#include "DeformImage.h"
+#include "Transformation.h"
+
+#include "Parametres.h"
+#include "Image.h"
+#include "Similarite.h"
+#include "CostFunction.h"
+#include "Interpolation.h"
+
 #include <iostream>
 #include <string>
 
