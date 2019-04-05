@@ -12,6 +12,8 @@ target_sources(
         Similarite.cpp
         CostFunction.cpp
         Interpolation.cpp
+        Transformation.cpp
+        DeformImage.cpp
         Recalage.cpp
     PUBLIC
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/HelloWorld.h

@@ -19,8 +19,8 @@ class DeformImage {
 			this->interp = i;
 		};
 		~DeformImage();
-		
-		void execute(Image *src, Image *dest, Image *maskS, Image *maskD, Parametres p);
+
+		Image* execute(Image *src, Image *dest, Image *maskS, Image *maskD, Parametres p);
 };
 
 #endif
