@@ -1,5 +1,6 @@
 # Visual studio code file
 .vscode
+.vs
 
 # Prerequisites
 *.d
