@@ -25,7 +25,7 @@ target_include_directories(
 # Effectively add test 
 add_test(
     NAME
-      unit
+    minimal_tests
     COMMAND
-      ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}/unit_tests
+      ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}/minimal_tests
   )
