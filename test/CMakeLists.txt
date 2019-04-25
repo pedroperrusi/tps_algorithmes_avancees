@@ -5,6 +5,8 @@ add_executable(
     minimal_tests  # Executable name
     hello_world_tests.cpp # Source code
     image_tests.cpp
+    transformation_tests.cpp
+    similarity_tests.cpp
   )
 
 # Link dependencies 
@@ -23,7 +25,7 @@ target_include_directories(
 # Effectively add test 
 add_test(
     NAME
-      unit
+    minimal_tests
     COMMAND
-      ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}/unit_tests
+      ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}/minimal_tests
   )

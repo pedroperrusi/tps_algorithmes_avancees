@@ -5,7 +5,7 @@ Image* DeformImage::execute(Image *src, Image *dest, Image *maskS, Image *maskD,
 		for(int j = 0; j < src->getWidth(); j++) {
 			int val_mask = 0;
 			Point s = Point(i,j);
-			Point sPrime = transf->execute(s, &p);
+			Point sPrime = transf->execute(s, p);
 			int x = round(sPrime.getX());
 			int y = round(sPrime.getY());
 			if(maskS->getValue(i,j) == 1){
@@ -19,4 +19,5 @@ Image* DeformImage::execute(Image *src, Image *dest, Image *maskS, Image *maskD,
 			}
 		}
 	}
+	return dest;
 }
