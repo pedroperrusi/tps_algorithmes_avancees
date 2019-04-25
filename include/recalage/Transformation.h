@@ -12,7 +12,7 @@ class Transformation {
 		Parametres param;
 	public:
 		Transformation(){
-			param = Parametres();
+			param = Parametres(3);
 		};
 		virtual Point execute(Point, Parametres&) = 0;
 		void setParam(Parametres&);
