@@ -75,7 +75,7 @@ void Image::readImageFromFile(char* filename)
     
     iop = fopen(filename, "w");
     fprintf(iop, "P2 ");
-    fprintf(iop, "%d %d\n", nc, nr);
+    fprintf(iop, "%d %d", nc, nr);
     fprintf(iop, "255\n");
     
     for(i = nr - 1; i  >= 0; i--)
