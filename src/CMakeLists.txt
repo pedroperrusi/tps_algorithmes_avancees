@@ -15,6 +15,7 @@ target_sources(
         Transformation.cpp
         DeformImage.cpp
         Recalage.cpp
+        Image.cpp
     PUBLIC
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/HelloWorld.h
         ${CMAKE_HOME_DIRECTORY}/include/${PROJECT_NAME}/Similarite.h

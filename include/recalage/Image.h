@@ -5,12 +5,15 @@
 
 #include "Point.h"
 
+#define MAX_PGM 800
+
 class Image
 {
   private:
     double* data;
     int width;
     int height;
+    int maxVal;
 
   public:
     Image()
@@ -26,6 +29,12 @@ class Image
         resize(w, h);
         allocImage();
     };
+
+    Image(char* filename)
+    {
+      this->data = NULL;
+      readImageFromFile(filename);
+    }
 
     ~Image()
     {
@@ -49,6 +58,9 @@ class Image
 
     inline void setValue(int x, int y, double val){ this->data[xy_to_idx(x, y)] = val; };
     inline void setValue(Point p, double val){ this->data[xy_to_idx(p.getX(), p.getY())] = val; };
+
+    void readImageFromFile(char*);
+    void writeImageToFile(char*);
 
   private:
     inline bool using_memory() { return !(this->data == NULL); };

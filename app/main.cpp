@@ -18,9 +18,9 @@
  */
 int main()
 {
-    hello_world::HelloWorld obj;
+    Image img("data/reference.pgm");
 
-    std::cout << obj.welcome() << std::endl;
+    img.writeImageToFile("out.pgm");
 
     return EXIT_SUCCESS;
 }
