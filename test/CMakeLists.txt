@@ -7,6 +7,7 @@ add_executable(
     image_tests.cpp
     transformation_tests.cpp
     similarity_tests.cpp
+    deformImage_tests.cpp
   )
 
 # Link dependencies 

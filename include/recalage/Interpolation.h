@@ -15,6 +15,7 @@ public:
 };
 
 class Interpolation_Bilineaire : public Interpolation {
+public:
 	double Execute (Image *img, Point a, int *val_mask);
 	
 };
